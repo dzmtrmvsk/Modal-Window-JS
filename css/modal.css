@@ -1,0 +1,84 @@
+/* GLOBAL STYLES */
+
+html{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* BELOW CUSTOM CSS STYLES */
+
+.modal-window, .modal-overlay { 
+    opacity: 0;
+    z-index: -1;
+}
+
+.vmodal.open .modal-window,
+.vmodal.open .modal-overlay {
+    opacity: 1;
+    z-index: 999;
+}
+
+.vmodal.hide .modal-window,
+.vmodal.hide .modal-overlay {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.vmodal.open .modal-window{
+    transform: translateY(200px);
+}
+
+.vmodal.open .modal-overlay{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background .4s ease-in-out;
+}
+
+.modal-window{
+    width:700px;
+    background: #FFF;
+    border-radius: 10px;
+    height: max-content;
+    margin: 0 auto;
+    transform: translateY(-300px);
+    transition: transform .4s ease-in-out;
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-title{
+    font-size: 1.5rem;
+}
+
+.modal-close{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-body{
+    padding: 15px;
+}
+
+
+.modal-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    padding: 0 10px 15px 10px;
+}
